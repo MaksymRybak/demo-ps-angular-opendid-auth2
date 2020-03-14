@@ -6,7 +6,7 @@ export class Constants {
 	// public static stsAuthority = 'https://securingangularappscoursev2-sts.azurewebsites.net/';
 
 	public static apiRoot = 'http://localhost:2112/api/';
-	public static stsAuthority = 'http://localhost:4242/';
+	public static stsAuthority = 'http://localhost:5000/';
 	// public static stsAuthority = 'https://briannoyes.auth0.com/';
 
 	public static clientId = 'spa-client';
