@@ -44,20 +44,21 @@ namespace SecuringAngularApps.API
             //        options.Audience = "projects-api";
             //        options.RequireHttpsMetadata = false;
             //    });
-            services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
-                       .AddIdentityServerAuthentication(options =>
-                       {
-                           options.Authority = "http://localhost:4242";
-                           options.ApiName = "projects-api";
-                           options.RequireHttpsMetadata = false;
-                       });
-            services.AddMvc(options =>
+            /* services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
+                        .AddIdentityServerAuthentication(options =>
+                        {
+                            options.Authority = "http://localhost:4242";
+                            options.ApiName = "projects-api";
+                            options.RequireHttpsMetadata = false;
+                        });*/
+            /*services.AddMvc(options =>
             {
                 var policy = new AuthorizationPolicyBuilder()
                 .RequireAuthenticatedUser()
                 .Build();
                 options.Filters.Add(new AuthorizeFilter(policy));
-            });
+            });*/
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -68,7 +69,7 @@ namespace SecuringAngularApps.API
                 app.UseDeveloperExceptionPage();
             }
             app.UseCors("AllRequests");
-            app.UseAuthentication();
+            // app.UseAuthentication();
             app.UseMvc();
         }
     }
