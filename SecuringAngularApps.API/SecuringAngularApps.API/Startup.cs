@@ -37,20 +37,20 @@ namespace SecuringAngularApps.API
                 });
             });
 
-            services.AddAuthentication("Bearer")
+            /*services.AddAuthentication("Bearer")
                 .AddJwtBearer("Bearer", options =>
                 {
                     options.Authority = "http://localhost:5000";
                     options.Audience = "projects-api";
                     options.RequireHttpsMetadata = false;
-                });
-            /*services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
+                });*/
+            services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
                         .AddIdentityServerAuthentication(options =>
                         {
-                            options.Authority = "http://localhost:4242";
+                            options.Authority = "http://localhost:5000";
                             options.ApiName = "projects-api";
                             options.RequireHttpsMetadata = false;
-                        });*/
+                        });
             services.AddMvc(options =>
             {
                 var policy = new AuthorizationPolicyBuilder()
