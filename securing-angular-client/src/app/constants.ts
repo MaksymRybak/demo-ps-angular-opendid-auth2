@@ -6,9 +6,9 @@ export class Constants {
 	// public static stsAuthority = 'https://securingangularappscoursev2-sts.azurewebsites.net/';
 
 	public static apiRoot = 'http://localhost:2112/api/';
-	public static stsAuthority = 'http://localhost:5000/';
-	// public static stsAuthority = 'https://briannoyes.auth0.com/';
+	// public static stsAuthority = 'http://localhost:5000/';
+	public static stsAuthority = 'https://rybak.eu.auth0.com/';
 
-	public static clientId = 'spa-client';
-	// public static clientId = 'Od8mbaoCGeXTF9ZWeQJspTTd7Qf1v1A7';
+	// public static clientId = 'spa-client';
+	public static clientId = 'C4iLoQBXhho3hOuF1W8iE0gpcheUeRAT';
 }
